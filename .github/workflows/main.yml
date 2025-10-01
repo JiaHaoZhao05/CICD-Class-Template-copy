@@ -15,3 +15,9 @@ jobs:
         
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
+        
+      - name: Build solution
+        run: msbuild .\PhysicsGame.sln /p:Configuration=Release
+        
+      - name: Intall Dependencies
+        run: npm install
